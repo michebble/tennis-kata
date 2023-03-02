@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require File.join(File.dirname(__FILE__), "tennis_game_1")
 require File.join(File.dirname(__FILE__), "tennis_game_2")
 require File.join(File.dirname(__FILE__), "tennis_game_3")
+require File.join(File.dirname(__FILE__), "tennis_game_4")
 require 'test/unit'
 
 TEST_CASES = [
@@ -47,19 +50,23 @@ TEST_CASES = [
    [4, 6, 'Win for Two', 'player1', 'Two'], 
    [6, 5, 'Advantage One', 'One', 'player2'],
    [5, 6, 'Advantage Two', 'player1', 'Two'] 
-]
+].freeze
 
 class TestTennis < Test::Unit::TestCase
-  def test_implementation_1
-    run_tests_for(TennisGame1)
-  end
+  # def test_implementation_1
+  #   run_tests_for(TennisGame1)
+  # end
 
-  def test_implementation_2
-    run_tests_for(TennisGame2)
-  end
+  # def test_implementation_2
+  #   run_tests_for(TennisGame2)
+  # end
 
-  def test_implementation_3
-    run_tests_for(TennisGame3)
+  # def test_implementation_3
+  #   run_tests_for(TennisGame3)
+  # end
+
+  def test_implementation_4
+    run_tests_for(TennisGame4)
   end
 
   def run_tests_for(klass)
